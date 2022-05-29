@@ -5,16 +5,27 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity
+@ApiModel
 public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@ApiModelProperty(notes="the unique id of user")
 	private int userId;
+	
+	@ApiModelProperty(notes="the user's first name")
 	private String fName;
+	@ApiModelProperty(notes="the user's last name")
 	private String lName;
+	@ApiModelProperty(notes="the user's email id")
 	private String emailId;
+	@ApiModelProperty(notes="the user's mobile no")
 	private long mobileNo;
+	
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
