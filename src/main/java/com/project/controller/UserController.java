@@ -45,7 +45,7 @@ public class UserController {
 	{
 		ModelAndView mv=new ModelAndView();
 		
-		if(username.equals("Admin")&&password.equals("password"))
+		if(username.equals("admin")&&password.equals("password"))
 		{
 			List<User> list=urepo.findAll();
 			mv.addObject("list",list);
